@@ -1,0 +1,27 @@
+|exercicio_1_a
+i[0] => a.DATAB
+i[0] => b.DATAB
+i[0] => c.DATAB
+i[0] => d.DATAB
+i[1] => a.DATAB
+i[1] => b.DATAB
+i[1] => c.DATAB
+i[1] => d.DATAB
+s[0] => Equal0.IN1
+s[0] => Equal1.IN1
+s[0] => Equal2.IN0
+s[0] => Equal3.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN0
+s[1] => Equal2.IN1
+s[1] => Equal3.IN0
+a[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= a.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+d[0] <= d.DB_MAX_OUTPUT_PORT_TYPE
+d[1] <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+

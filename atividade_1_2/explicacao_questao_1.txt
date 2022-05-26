@@ -1,0 +1,5 @@
+Primeiramente, nem o código "a", nem o "b" apresentaram erros de compilação.
+
+O código "a" não correspndeu aos valores esperados de acordo com a tabela verdade, o contra exemplo pode ser visto na imagem da simulação do código "a".
+
+O código "b" correspondeu aos valores esperados de acordo com a tabela verdade.

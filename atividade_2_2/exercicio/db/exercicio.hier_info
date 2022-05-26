@@ -1,0 +1,125 @@
+|exercicio
+a[0] => full_adder:instancia_0.a
+a[1] => full_adder:instancia_1.a
+a[2] => full_adder:instancia_2.a
+a[3] => full_adder:instancia_3.a
+a[4] => full_adder:instancia_4.a
+a[5] => full_adder:instancia_5.a
+a[6] => full_adder:instancia_6.a
+a[7] => full_adder:instancia_7.a
+b[0] => comb.IN0
+b[1] => comb.IN0
+b[2] => comb.IN0
+b[3] => comb.IN0
+b[4] => comb.IN0
+b[5] => comb.IN0
+b[6] => comb.IN0
+b[7] => comb.IN0
+c_in => comb.IN1
+c_in => comb.IN1
+c_in => comb.IN1
+c_in => comb.IN1
+c_in => comb.IN1
+c_in => comb.IN1
+c_in => comb.IN1
+c_in => comb.IN1
+c_in => full_adder:instancia_0.c_in
+c_out <= full_adder:instancia_0.s
+f[0] <= full_adder:instancia_0.s
+f[1] <= full_adder:instancia_1.s
+f[2] <= full_adder:instancia_2.s
+f[3] <= full_adder:instancia_3.s
+f[4] <= full_adder:instancia_4.s
+f[5] <= full_adder:instancia_5.s
+f[6] <= full_adder:instancia_6.s
+f[7] <= full_adder:instancia_7.s
+
+
+|exercicio|full_adder:instancia_0
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio|full_adder:instancia_1
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio|full_adder:instancia_2
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio|full_adder:instancia_3
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio|full_adder:instancia_4
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio|full_adder:instancia_5
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio|full_adder:instancia_6
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio|full_adder:instancia_7
+a => s.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

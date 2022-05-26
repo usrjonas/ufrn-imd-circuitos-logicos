@@ -1,0 +1,12 @@
+|questao_2_dataflow
+a => expressao_1.IN0
+a => expressao_1.IN0
+b => expressao_1.IN1
+b => expressao_2.IN0
+c => expressao_1.IN1
+c => expressao_2.IN1
+c => expressao_2.IN1
+d => expressao_3.IN1
+x <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
