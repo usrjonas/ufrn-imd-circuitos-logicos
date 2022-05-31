@@ -1,5 +1,6 @@
 # Ignore everything in folders exercicio:
 **/exercicio*/*
+**/questao*/*
 
 # Ignore tales repository
 _repositorio_tales
