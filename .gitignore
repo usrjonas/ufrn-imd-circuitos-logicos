@@ -8,6 +8,9 @@ _repositorio_tales
 # Ignore .zip files
 *.zip
 
+# Ignore .pdf files
+*.pdf
+
 # But not ignore these files...
 !*.vhd
 !*.vhdl
