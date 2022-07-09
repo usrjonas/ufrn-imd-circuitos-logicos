@@ -12,15 +12,6 @@ END;
 
 ARCHITECTURE architecture_ula OF exercicio_1 is
 
-    -- COMPONENT componente_logico IS
-	-- PORT ( 
-    --         a, b        : IN std_logic_vector (7 downto 0);
-    --         m, s_0, s_1 : IN std_logic_vector (3 downto 0);
-    --         o_a, o_b    : OUT std_logic_vector (7 downto 0);
-    --         carry       : OUT std_logic
-    --      );
-    -- END COMPONENT;
-
     COMPONENT somador_um_byte IS
 	PORT ( 
             a, b    : IN std_logic_vector (7 downto 0);
@@ -68,9 +59,6 @@ ARCHITECTURE architecture_ula OF exercicio_1 is
     SIGNAL carry_out                : std_logic;
     SIGNAL first_carry              : std_logic;
 
-    -- SIGNAL out_b_componente_logico  : std_logic_vector(7 downto 0);
-    -- SIGNAL overflow_somador_um_byte : std_logic;
-
 BEGIN
 
     m           <= s(0); 
@@ -98,23 +86,6 @@ BEGIN
     extensor_logico_7       : extensor_logico       PORT MAP ( a(7), b(7), m, seletor, out_x_extensor_logico(7) );
 
     somador_um_byte_0       : somador_um_byte       PORT MAP ( out_y_extensor_aritmetico, out_x_extensor_logico, first_carry, carry_out, out_f_somador_um_byte );
-
-    -- somador_um_bit_0    : somador_um_bit    PORT MAP ( out_x_extensor_logico(0), out_y_extensor_aritmetico(0), '0',
-    --                                                            carry(0), out_f_somador_um_bit(0) );
-    -- somador_um_bit_1    : somador_um_bit    PORT MAP ( out_x_extensor_logico(1), out_y_extensor_aritmetico(1), carry(0),
-    --                                                            carry(1), out_f_somador_um_bit(1) );
-    -- somador_um_bit_2    : somador_um_bit    PORT MAP ( out_x_extensor_logico(2), out_y_extensor_aritmetico(2), carry(1),
-    --                                                            carry(2), out_f_somador_um_bit(2) );
-    -- somador_um_bit_3    : somador_um_bit    PORT MAP ( out_x_extensor_logico(3), out_y_extensor_aritmetico(3), carry(2),
-    --                                                            carry(3), out_f_somador_um_bit(3) );
-    -- somador_um_bit_4    : somador_um_bit    PORT MAP ( out_x_extensor_logico(4), out_y_extensor_aritmetico(4), carry(3),
-    --                                                            carry(4), out_f_somador_um_bit(4) );
-    -- somador_um_bit_5    : somador_um_bit    PORT MAP ( out_x_extensor_logico(5), out_y_extensor_aritmetico(5), carry(4),
-    --                                                            carry(5), out_f_somador_um_bit(5) );
-    -- somador_um_bit_6    : somador_um_bit    PORT MAP ( out_x_extensor_logico(6), out_y_extensor_aritmetico(6), carry(5),
-    --                                                            carry(6), out_f_somador_um_bit(6) );
-    -- somador_um_bit_7    : somador_um_bit    PORT MAP ( out_x_extensor_logico(7), out_y_extensor_aritmetico(7), carry(6),
-    --                                                            carry(7), out_f_somador_um_bit(7) );
 
     f <= out_f_somador_um_byte;
 
