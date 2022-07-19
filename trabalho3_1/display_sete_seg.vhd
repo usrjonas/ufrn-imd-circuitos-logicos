@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-ENTITY trabalho3_1 IS
+ENTITY display_sete_seg IS
 	PORT ( 
             i : IN std_logic_vector (3 downto 0);
             o : OUT std_logic_vector (6 downto 0)
 		  );
 END;
 
-ARCHITECTURE decod_display_sete_seg OF trabalho3_1 is
+ARCHITECTURE decod_display OF display_sete_seg is
 BEGIN
 PROCESS (i)
 BEGIN
@@ -35,4 +35,4 @@ BEGIN
     END CASE;
 
 END PROCESS;
-END decod_display_sete_seg;
+END decod_display;
