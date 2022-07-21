@@ -7,8 +7,8 @@ use ieee.numeric_std.all;
 
 ENTITY ula IS
 	PORT ( 
-            e1, e2: IN std_logic;
-            s: IN std_logic_vector(2  downto 0);
+            e1, e2, e3: IN std_logic;
+            s: IN std_logic_vector(15  downto 0);
             i: IN std_logic_vector(15 downto 0);
             d1, d2, d3, d4: OUT std_logic_vector(6 downto 0)
 		  );
@@ -30,26 +30,27 @@ ARCHITECTURE bits_16 OF ula is
 BEGIN
 PROCESS (e1, e2, i, a, b, s, f1, f2)
 BEGIN
+    -- Para mostrar valores mesmo antes de realizar a operação
+    o <= i;
+
     IF (e1 = '0') THEN
         a <= i;
-        f1 <= '1';
-    END IF
+    END IF;
 
     IF (e2 = '0') THEN
         b <= i;
-        f2 <= '1';
-    END IF
+    END IF;
 
-    IF (f1 = '1' AND f2 = '1') THEN
+    IF (e3 = '0') THEN
         CASE s IS
-            WHEN "000" => o <= a + b;
-            WHEN "001" => o <= a - b;
-            WHEN "010" => o <= std_logic_vector(shift_left (unsigned(a), 1));
-            WHEN "011" => o <= std_logic_vector(shift_right(unsigned(a), 1));
-            WHEN "100" => o <= a and  b;
-            WHEN "101" => o <= a  or  b;
-            WHEN "110" => o <= a xor  b;
-            WHEN "111" => o <= a xnor b;
+            WHEN "0000000000000000" => o <= a + b;
+            WHEN "0000000000000001" => o <= a - b;
+            WHEN "0000000000000010" => o <= std_logic_vector(shift_left (unsigned(a), 1));
+            WHEN "0000000000000011" => o <= std_logic_vector(shift_right(unsigned(a), 1));
+            WHEN "0000000000000100" => o <= a and  b;
+            WHEN "0000000000000101" => o <= a  or  b;
+            WHEN "0000000000000110" => o <= a xor  b;
+            WHEN "0000000000000111" => o <= a xnor b;
             WHEN others => o <= "0000000000000000";
         END CASE;
     END IF;
