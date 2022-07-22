@@ -67,12 +67,12 @@ BEGIN
 
         -- Calcula o quociente
         IF (isRunnig = '1') THEN
-            IF (a >= b) THEN
+            IF (a >= b and b /= "0000000000000000") THEN
                 a       <= a - b;
                 counter <= counter + '1';
             ELSE
                 -- Se A < B, então da erro
-                IF (counter = "0000000000000000") THEN
+                IF (counter = "0000000000000000" or b = "0000000000000000") THEN
                     counter   <= "1110111011101110";
                 END IF;
 
