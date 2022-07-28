@@ -9,10 +9,9 @@ ENTITY trabalho3_3 IS
             clk             : IN std_logic;
             i               : IN std_logic_vector(15 downto 0);
             d1, d2, d3, d4  : OUT std_logic_vector(6 downto 0);
+            d5, d6, d7, d8  : OUT std_logic_vector(6 downto 0);
             l1, l2          : OUT std_logic;
-            aout, bout      : OUT std_logic_vector(15 downto 0);
             f1out, f2out    : OUT std_logic;
-            counterOut      : OUT std_logic_vector(15 downto 0);
             isRunnigOut     : OUT std_logic
 		  );
 END;
@@ -27,6 +26,7 @@ ARCHITECTURE hardware OF trabalho3_3 is
     END COMPONENT;
 
     SIGNAL a, b, counter    : std_logic_vector(15 downto 0) := "0000000000000000";
+    SIGNAL o                : std_logic_vector(15 downto 0) := "0000000000000000";
     SIGNAL f1, f2, isRunnig : std_logic                     := '0';
 
 
@@ -36,6 +36,7 @@ BEGIN
     -- Clock na borda de subida
     IF rising_edge(clk) THEN
         -- Pode-se criar um signal e displays para mostrar o i em tempo real
+        o <= i;
 
         -- Recebe os valores de A
         IF (e1 = '0' and isRunnig = '0') THEN
@@ -88,11 +89,13 @@ ent1: display_sete_seg PORT MAP (counter(11 downto 8), d2);
 ent2: display_sete_seg PORT MAP (counter(7 downto 4), d3);
 ent3: display_sete_seg PORT MAP (counter(3 downto 0), d4);
 
+ent4: display_sete_seg PORT MAP (o(7 downto 4), d5);
+ent5: display_sete_seg PORT MAP (o(3 downto 0), d6);
+ent6: display_sete_seg PORT MAP (a(7 downto 4), d7);
+ent7: display_sete_seg PORT MAP (a(3 downto 0), d8);
+
 f1out <= f1;
 f2out <= f2;
 isRunnigOut <= isRunnig;
-aout <= a;
-bout <= b;
-counterOut <= counter;
 
 END hardware;
